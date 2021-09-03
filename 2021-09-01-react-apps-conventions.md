@@ -38,15 +38,15 @@ Lo siguiente no es más que una propuesta tras haber probado diferentes convenci
 
 ## Estructura de carpetas
 
-- Todas las carpetas deben tener un index.js que exporte una o varias cosas, dependiendo de si el nombre de esa carpeta empieza por mayúscula o minúscula, es singular o plural, es verbo o sustantivo,...
+- Todas las **carpetas** deben tener un **index.js** que exporte una o varias cosas, dependiendo de si el nombre de esa carpeta empieza por mayúscula o minúscula, es singular o plural, es verbo o sustantivo,...
 
-- Cualquier cosa puede ser un archivo o una carpeta. Sólo depende del tamaño que tenga ese archivo.
+- Cualquier cosa puede ser un **archivo** o una **carpeta**. Sólo depende del **tamaño** (en líneas de código) que tenga ese archivo.
 
     Ejemplo: Si tenemos un ComponenteX.js que contiene styled components, constantes, o algún hook o helper que sólo se usan en ese componente y hacen demasiado grande el archivo y queremos dividirlo, debemos crear una carpeta con el mismo nombre ComponenteX/ , mover el archivo ComponenteX.js a esa carpeta, renombrarlo a index.js y sacar los archivos que queramos a esa carpeta.
     
-    <small>Nota: Para hacer esto debemos parar y volver a ejecutar el bundler que tengamos levantado (webpack, parcel,...), de lo contrario, los imports darán un error de compilación.</small>
+    <sub>Nota: Para hacer esto debemos parar y volver a ejecutar el bundler que tengamos levantado (webpack, parcel,...), de lo contrario, los imports darán un error de compilación.</sub>
     
-- Imports: NUNCA importaremos nada de una ruta del interior de un componente. Es decir, esto estaría prohibido:
+- **Imports**: NUNCA importaremos nada de una ruta del interior de un componente. Es decir, esto estaría prohibido:
     ```javascript
     import { x } from "./ComponentXx/archivo"
     import { x } from "./ComponentXx/carpeta/loQueSea/..."
@@ -61,8 +61,8 @@ Lo siguiente no es más que una propuesta tras haber probado diferentes convenci
 - Libertad total de nombres. Nos podemos inventar todos los nombres de archivos o carpetas tanto en mayúsculas (Componentes) como en minúsculas (otras cosas) que nos hagan falta.
 
     Ejemplos:\
-    .../ComponentX/components/filters/... <small>(agrupando componentes que tienen algo en común)</small>\
-    .../ComponentX/units.js
+    .../ComponentX/components/**filters**/... <small>(agrupando componentes que tienen algo en común)</small>\
+    .../ComponentX/**units.js**
 
 ## [WIP] Moviéndonos por primera vez por un proyecto bien estructurado
 
