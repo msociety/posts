@@ -10,7 +10,7 @@ Lo siguiente no es más que una propuesta tras haber probado diferentes convenci
 
 - Todo lo que empiece por **mayúscula** es un **componente**
 - Todo lo que empiece por **minúscula** es **otra cosa** (no componente)
-- Un archivo o carpeta de **componente** sólo puede tener **un export default** (no hace export de nada más).
+- Un archivo o carpeta de **componente** sólo puede tener **un export default** (no hace export de nada más). Además del default, puede tener otro export para el type/interface de sus props (para poder crear tipos nuevos que extiendan de éste).
 - Las **funciones** siempre empiezan por **verbo**
 - Todo lo que no empiece por verbo (**sustantivo**, pronombre,...), será **otra cosa** (no es función):
     - Un componente
