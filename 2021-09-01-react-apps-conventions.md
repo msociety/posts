@@ -31,18 +31,18 @@ Lo siguiente no es más que una propuesta tras haber probado diferentes convenci
 ### Evitar:
 
 - **Nombres redundantes** (tanto en archivos y carpetas como en constantes y variables). Ejemplos:
-    - Nombres de negocio: .../ComponentXx/~~ComponentXx~~Header.js
-    - Nombres de tipo de archivo: .../helpers/doSomething~~Helper~~.js
+    - Nombres de negocio: .../ComponentXx/~~ComponentXx~~Header.tsx
+    - Nombres de tipo de archivo: .../helpers/doSomething~~Helper~~.tsx
 - **Cambios de nombres** o alias al importar funciones, componentes, constantes, etc...
 - **Acrónimos y abreviaturas**. No demos por hecho que quien venga detrás lo va a entender.
 
 ## Estructura de carpetas
 
-- Todas las **carpetas** deben tener un **index.js** que exporte una o varias cosas, dependiendo de si el nombre de esa carpeta empieza por mayúscula o minúscula, es singular o plural, es verbo o sustantivo,...
+- Todas las **carpetas** deben tener un **index.ts(x?)** que exporte una o varias cosas, dependiendo de si el nombre de esa carpeta empieza por mayúscula o minúscula, es singular o plural, es verbo o sustantivo,...
 
 - Cualquier cosa puede ser un **archivo** o una **carpeta**. Sólo depende del **tamaño** (en líneas de código) que tenga ese archivo.
 
-    Ejemplo: Si tenemos un ComponenteX.js que contiene styled components, constantes, o algún hook o helper que sólo se usan en ese componente y hacen demasiado grande el archivo y queremos dividirlo, debemos crear una carpeta con el mismo nombre ComponenteX/ , mover el archivo ComponenteX.js a esa carpeta, renombrarlo a index.js y sacar los archivos que queramos a esa carpeta.
+    Ejemplo: Si tenemos un ComponenteX.tsx que contiene styled components, constantes, o algún hook o helper que sólo se usan en ese componente y hacen demasiado grande el archivo y queremos dividirlo, debemos crear una carpeta con el mismo nombre ComponenteX/ , mover el archivo ComponenteX.tsx a esa carpeta, renombrarlo a index.tsx y sacar los archivos que queramos a esa carpeta.
     
     <sub>Nota: Para hacer esto debemos parar y volver a ejecutar el bundler que tengamos levantado (webpack, parcel,...), de lo contrario, los imports darán un error de compilación.</sub>
     
@@ -62,7 +62,7 @@ Lo siguiente no es más que una propuesta tras haber probado diferentes convenci
 
     Ejemplos:\
     .../ComponentX/components/**filters**/... <small>(agrupando componentes que tienen algo en común)</small>\
-    .../ComponentX/**units.js**
+    .../ComponentX/**units.ts**
 
 ## [WIP] Moviéndonos por primera vez por un proyecto bien estructurado
 
